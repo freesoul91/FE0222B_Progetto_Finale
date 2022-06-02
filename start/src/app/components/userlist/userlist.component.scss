@@ -1,0 +1,28 @@
+tbody {
+  border: rgb(71, 177, 212);
+}
+
+.container {
+  margin-top: 30px;
+}
+
+th .btn {
+  background-color: rgb(222, 238, 9);
+  color: black;
+}
+
+.page-item a {
+  border: 1px solid rgb(6, 6, 6);
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.668);
+}
+
+.page-item a:hover,
+.page-item a:active,
+.page-item.active .page-link {
+  background-color: rgb(3, 116, 154);
+}
+
+tbody tr:nth-child(even) {
+  background-color: lightblue;
+}

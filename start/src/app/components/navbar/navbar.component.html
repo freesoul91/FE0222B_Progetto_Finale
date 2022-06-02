@@ -1,0 +1,28 @@
+<div class="container-fluid">
+  <nav class="navbar navbar-expand-xxl navbar-dark bg-dark" mb-3 *ngIf="isLogged">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+        (click)="isMenuCollapsed = !isMenuCollapsed">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse " id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+          <li class="nav-item active"><a class="nav-link home" routerLink="/home" (click)="isMenuCollapsed = true"> Home
+              <i class="bi bi-house-door-fill casa"></i></a></li>
+          <li class="nav-item"><a class="nav-link" routerLink="/lista" (click)="isMenuCollapsed = true"> Utenti <i
+                class="bi bi-person-fill casa"></i></a></li>
+          <li class="nav-item"><a class="nav-link" routerLink="/signup" (click)="isMenuCollapsed = true"> Signup <i
+                class="bi bi-box-arrow-in-right casa"></i></a></li>
+          <li class="nav-item"><a class="nav-link" routerLink="/clienti" (click)="isMenuCollapsed = true"> Clienti <i
+                class="bi bi-people-fill casa"></i></a></li>
+          <li class="nav-item"><a class="nav-link" routerLink="/fatture" (click)="isMenuCollapsed = true"> Fatture <i
+                class="bi bi-clipboard-data-fill casa"></i></a></li>
+          <li class="nav-item boti ">
+            <button class="btn " type="button" (click)="logout()">Logout </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>

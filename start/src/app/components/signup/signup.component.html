@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <form [formGroup]="form" (submit)="regSalva(form)">
+        <div class="mb-3">
+          <label class="form-label">Username*</label>
+          <input class="form-control" formControlName="username" type="text" id="username" autocomplete="false">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Email*</label>
+          <input class="form-control" formControlName="email" type="email" id="email" autocomplete="false">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Password*</label>
+          <input class="form-control" formControlName="password" type="password" id="password" autocomplete="false">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Roles</label>
+          <select class="form-control" formControlName="roles" id="roles">
+            <option value="admin">Admin</option>
+            <option value="user">User</option>
+          </select>
+        </div>
+        <div style="margin-top:20px">
+          <button type="submit" class="btn btn-dark" [disabled]="!form.valid">Salva</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<p>Hai già un account? <a class="altro" routerLink="/">Accedi</a></p>

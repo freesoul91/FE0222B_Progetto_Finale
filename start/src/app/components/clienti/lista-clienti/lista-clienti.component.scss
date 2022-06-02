@@ -1,0 +1,52 @@
+.container {
+  margin-top: 30px;
+}
+
+tbody {
+  border: rgb(222, 238, 9);
+}
+
+th .btn {
+  background-color: rgb(222, 238, 9);
+  color: black;
+}
+
+.page-item a {
+  border: 1px solid rgb(6, 6, 6);
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.668);
+}
+
+.page-item a:hover,
+.page-item a:active,
+.page-item.active .page-link {
+  background-color: yellow;
+}
+
+tbody tr:nth-child(even) {
+  background-color: rgba(243, 243, 150, 0.868);
+}
+
+.fatt {
+  border: 2px solid rgb(165, 219, 247);
+  background-color: rgb(165, 219, 247);
+  color: black;
+}
+
+.mod {
+  border: 2px solid rgb(238, 213, 128);
+  background-color: rgb(238, 213, 128);
+  color: black;
+}
+
+.elimina {
+  border: 2px solid rgb(241, 135, 135);
+  background-color: rgb(241, 135, 135);
+  color: black;
+}
+
+/*.fatt {
+  border: 2px solid rgb(222, 238, 9);
+  background-color: black;
+  color: rgb(212, 227, 0);
+}*/

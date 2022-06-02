@@ -1,0 +1,57 @@
+<div>
+  <app-navbar></app-navbar>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>Username</th>
+              <th>Email</th>
+              <th>Roles</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let user of users">
+              <td>{{ user.id }}</td>
+              <td>{{ user.username }}</td>
+              <td>{{ user.email }}</td>
+              <td>
+                <span class="btn" *ngFor="let item of user.roles">{{
+                  item.roleName
+                }}</span>
+              </td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="8">
+                <nav aria-label="Page navigation example">
+                  <ul class="pagination" *ngIf="response">
+                    <li class="page-item" *ngIf="!response.first">
+                      <a class="page-link" (click)="
+                          $event.preventDefault();
+                          CambiaPagina(response.number - 1)
+                        " href="#">Previous</a>
+                    </li>
+                    <li class="page-item" *ngFor="let p of counter(response.totalPages); index as i"
+                      [ngClass]="i == response.number ? 'active' : ''">
+                      <a class="page-link" (click)="$event.preventDefault(); CambiaPagina(i)" href="#">{{ i + 1 }}</a>
+                    </li>
+                    <li class="page-item" *ngIf="!response.last">
+                      <a class="page-link" (click)="
+                          $event.preventDefault();
+                          CambiaPagina(response.number + 1)
+                        " href="#">Next</a>
+                    </li>
+                  </ul>
+                </nav>
+              </td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

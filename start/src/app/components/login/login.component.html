@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <form [formGroup]="form" (submit)="accessLog(form)">
+        <div class="mb-3">
+          <label class="form-label">Username*</label>
+          <input class="form-control" formControlName="username" type="text" id="username" autocomplete="false">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Password*</label>
+          <input class="form-control" formControlName="password" type="password" id="password" autocomplete="false">
+        </div>
+        <div style="margin-top:20px">
+          <button type="submit" class="btn btn-dark" [disabled]="!form.valid">Accedi</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<p>Non hai un account? <a class="altro" routerLink="/signup">Registrati</a></p>

@@ -1,0 +1,41 @@
+.container {
+  margin-top: 150px;
+  font-size: 1.2em;
+}
+
+.row {
+  margin: 100px auto 0 auto;
+  padding: 40px 25px;
+  outline: 2px solid rgb(0, 0, 0);
+  outline-offset: 10px;
+  width: 700px;
+  background-color: white;
+  border: 3px solid rgba(237, 85, 85, 0.954);
+}
+
+.btn {
+  border: 1px solid rgb(222, 238, 9);
+  padding: 8px 15px;
+  font-size: 0.9em;
+}
+
+.btn:hover {
+  background-color: rgb(110, 110, 109);
+  padding: 7px 13px;
+  font-size: 1em;
+}
+
+.form-control {
+  font-size: 1em;
+  border: 1px solid rgb(222, 238, 9);
+}
+
+p {
+  padding-top: 20px;
+  text-align: center;
+  font-size: 1em;
+}
+
+.altro {
+  color: rgb(168, 177, 40);
+}
